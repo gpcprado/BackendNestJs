@@ -2,7 +2,7 @@ export interface Concern {
 
   concern_id?: number; 
 
-  username: string; 
+  usernameCon: string; 
 
   concern_content: string; 
 
