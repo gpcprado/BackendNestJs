@@ -35,16 +35,16 @@ export class ConcernController {
     @Body() Body: any
     ) {
       
-      const { username, concern_content } = Body;
+      const { usernameCon, concern_content } = Body;
       const userId = (req.user as any)?.id;
       
-      return this.concernService.createConcern(username, concern_content, userId);
+      return this.concernService.createConcern(usernameCon, concern_content, userId);
     }
     
   @Put(':id')
 async update(
   @Param('id') id: number,
-  @Body() data: { username?: string; concern_content?: string },
+  @Body() data: { usernameCon?: string; concern_content?: string },
 ) {
     const updatedConcern = await this.concernService.updateConcern(id, data); 
 
